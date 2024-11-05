@@ -15,8 +15,8 @@ function App() {
     if (numberAllowed) str += "0123456789";
     if (charAllowed) str += "!@#$%^&*-_+=[]{}~`";
     for (let i = 1; i <= length; i++) {
-      let char = Math.floor(Math.random() * str.length + 1);
-      pass += str.charAt(char);
+      let charIndex = Math.floor(Math.random() * str.length + 1);
+      pass += str.charAt(charIndex);
     }
     setPassword(pass);
   }, [length, numberAllowed, charAllowed]);
